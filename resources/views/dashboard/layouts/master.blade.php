@@ -63,7 +63,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="employee.html" class="nav-link text-white mb-2 sidebar-link">
+                                <a href="{{route('employee.index')}}" class="nav-link text-white mb-2 sidebar-link">
                                     <i class="fas fa-users fa-lg mr-2"></i>Employees
                                 </a>
                             </li>
