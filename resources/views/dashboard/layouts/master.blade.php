@@ -48,7 +48,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="admin.html" class="nav-link text-white mb-2 sidebar-link">
+                                <a href="{{route('user.index')}}" class="nav-link text-white mb-2 sidebar-link">
                                     <i class="fas fa-user-circle fa-lg mr-2"></i>Admin List
                                 </a>
                             </li>

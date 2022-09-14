@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\dashboard\ExpenseController;
 use App\Http\Controllers\dashboard\EmployeeController;
+use App\Http\Controllers\dashboard\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,10 @@ use App\Http\Controllers\dashboard\EmployeeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//-------------Admin-------------//
+Route::get('/users', [UserController::class,'index'])->name('user.index');
+Route::post('/users/store', [UserController::class,'store'])->name('user.store');
 
 //-------------Expense-------------//
 Route::get('/expenses', [ExpenseController::class,'index'])->name('expense.index');
