@@ -32,7 +32,7 @@
 					<a class="nav-link" href="about.html">About</a>
 				</li>
 				<li class="nav-item border-left border-secondary">
-					<a class="nav-link" href="menu.html">Menu</a>
+					<a class="nav-link" href="{{route('menu')}}">Menu</a>
 				</li>
 				<li class="nav-item border-left border-secondary">
 					<a class="nav-link" href="order.html">Order</a>
@@ -86,7 +86,7 @@
 							<a class="nav-link" style="color: #aaa;" href="{{route('home')}}">Home</a>
 						</li>
 						<li class="nav-item border-bottom">
-							<a class="nav-link" style="color: #aaa;" href="menu.html">Food Menu</a>
+							<a class="nav-link" style="color: #aaa;" href="{{route('menu')}}">Food Menu</a>
 						</li>
 						<li class="nav-item border-bottom">
 							<a class="nav-link" style="color: #aaa;" href="order.html">Food Order</a>

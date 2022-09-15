@@ -6,6 +6,7 @@ use App\Http\Controllers\dashboard\EmployeeController;
 use App\Http\Controllers\dashboard\UserController;
 use App\Http\Controllers\dashboard\MenuController;
 use App\Http\Controllers\frontend\HomeController;
+use App\Http\Controllers\frontend\AllMenuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,7 @@ use App\Http\Controllers\frontend\HomeController;
 //----------------------------------------------------------------------//
 
 Route::get('/', [HomeController::class,'index'])->name('home');
+Route::get('/allmenus', [AllMenuController::class,'index'])->name('menu');
 
 //----------------------------------------------------------------------//
 //---------------------------------------Dashboard----------------------//
