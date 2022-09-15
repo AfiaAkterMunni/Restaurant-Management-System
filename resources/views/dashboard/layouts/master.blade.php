@@ -43,7 +43,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="menu.html" class="nav-link text-white mb-2 sidebar-link">
+                                <a href="{{route('menu.index')}}" class="nav-link text-white mb-2 sidebar-link">
                                     <i class="fas fa-file-alt fa-lg mr-2"></i>Menu
                                 </a>
                             </li>

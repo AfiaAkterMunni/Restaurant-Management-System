@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\dashboard\ExpenseController;
 use App\Http\Controllers\dashboard\EmployeeController;
 use App\Http\Controllers\dashboard\UserController;
+use App\Http\Controllers\dashboard\MenuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,13 @@ use App\Http\Controllers\dashboard\UserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//-------------Menu-------------//
+Route::get('/menus', [MenuController::class,'index'])->name('menu.index');
+Route::post('/menus/category/store', [CategoryController::class,'store'])->name('category.store');
+Route::post('/menus/store', [MenuController::class,'store'])->name('menu.store');
+Route::post('/menus/update/{id}', [MenuController::class,'update'])->name('menu.update');
+Route::get('/menus/delete/{id}', [MenuController::class,'delete'])->name('menu.delete');
 
 //-------------Admin-------------//
 Route::get('/users', [UserController::class,'index'])->name('user.index');
