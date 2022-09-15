@@ -5,6 +5,7 @@ use App\Http\Controllers\dashboard\ExpenseController;
 use App\Http\Controllers\dashboard\EmployeeController;
 use App\Http\Controllers\dashboard\UserController;
 use App\Http\Controllers\dashboard\MenuController;
+use App\Http\Controllers\frontend\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,15 @@ use App\Http\Controllers\dashboard\MenuController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//----------------------------------------------------------------------//
+//---------------------------------Frontend-----------------------------//
+//----------------------------------------------------------------------//
+
+Route::get('/', [HomeController::class,'index'])->name('home');
+
+//----------------------------------------------------------------------//
+//---------------------------------------Dashboard----------------------//
+//----------------------------------------------------------------------//
 
 //-------------Menu-------------//
 Route::get('/menus', [MenuController::class,'index'])->name('menu.index');
