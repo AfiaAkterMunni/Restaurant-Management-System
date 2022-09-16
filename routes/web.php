@@ -1,14 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\dashboard\ExpenseController;
-use App\Http\Controllers\dashboard\EmployeeController;
+use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\dashboard\UserController;
 use App\Http\Controllers\dashboard\MenuController;
-use App\Http\Controllers\frontend\HomeController;
-use App\Http\Controllers\frontend\AllMenuController;
 use App\Http\Controllers\frontend\AboutController;
+use App\Http\Controllers\frontend\AllMenuController;
 use App\Http\Controllers\frontend\ContactController;
+use App\Http\Controllers\dashboard\ExpenseController;
+use App\Http\Controllers\dashboard\MessageController;
+use App\Http\Controllers\dashboard\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,6 +53,10 @@ Route::get('/expenses', [ExpenseController::class,'index'])->name('expense.index
 Route::post('/expenses/store', [ExpenseController::class,'store'])->name('expense.store');
 Route::post('/expenses/update/{id}', [ExpenseController::class,'update'])->name('expense.update');
 Route::get('/expenses/delete/{id}', [ExpenseController::class,'delete'])->name('expense.delete');
+
+//-------------message-------------//
+Route::get('/messages', [MessageController::class,'index'])->name('messages');
+Route::get('/messages/delete/{id}', [MessageController::class,'delete'])->name('message.delete');
 
 //-------------Employee-------------//
 Route::get('/employees', [EmployeeController::class,'index'])->name('employee.index');

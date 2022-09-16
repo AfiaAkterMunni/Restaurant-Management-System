@@ -58,7 +58,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="message.html" class="nav-link text-white mb-2 sidebar-link">
+                                <a href="{{route('messages')}}" class="nav-link text-white mb-2 sidebar-link">
                                     <i class="fas fa-envelope fa-lg mr-2"></i>Message
                                 </a>
                             </li>
