@@ -29,7 +29,7 @@
 					<a class="nav-link border-left border-secondary" href="{{route('home')}}">Home</a>
 				</li>
 				<li class="nav-item border-left border-secondary">
-					<a class="nav-link" href="about.html">About</a>
+					<a class="nav-link" href="{{route('about')}}">About</a>
 				</li>
 				<li class="nav-item border-left border-secondary">
 					<a class="nav-link" href="{{route('menu')}}">Menu</a>
