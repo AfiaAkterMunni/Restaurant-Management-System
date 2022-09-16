@@ -8,6 +8,7 @@ use App\Http\Controllers\dashboard\MenuController;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\frontend\AllMenuController;
 use App\Http\Controllers\frontend\AboutController;
+use App\Http\Controllers\frontend\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,11 @@ use App\Http\Controllers\frontend\AboutController;
 
 Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/about', [AboutController::class,'index'])->name('about');
+Route::get('/contact', [ContactController::class,'index'])->name('contact');
 Route::get('/allmenus', [AllMenuController::class,'index'])->name('menu');
+
+//---contact store---//
+Route::post('/contact/store', [ContactController::class,'store'])->name('contact.store');
 
 //----------------------------------------------------------------------//
 //---------------------------------------Dashboard----------------------//

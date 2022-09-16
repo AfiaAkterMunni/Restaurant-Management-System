@@ -41,7 +41,7 @@
 					<a class="nav-link" href="reservation.html">Reservation</a>
 				</li>
 				<li class="nav-item border-left border-right border-secondary">
-					<a class="nav-link" href="contact.html">Contact Us</a>
+					<a class="nav-link" href="{{route('contact')}}">Contact Us</a>
 				</li>
 			</ul>
 		</div>
@@ -95,7 +95,7 @@
 							<a class="nav-link" style="color: #aaa;" href="reservation.html">Table Reservation</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" style="color: #aaa;" href="contact.html">Contuct Us</a>
+							<a class="nav-link" style="color: #aaa;" href="{{route('contact')}}">Contuct Us</a>
 						</li>
 					</ul>
 				</div>
