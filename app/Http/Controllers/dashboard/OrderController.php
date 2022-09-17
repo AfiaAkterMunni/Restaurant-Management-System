@@ -25,7 +25,9 @@ class OrderController extends Controller
 
     public function delete(Request $request, $id)
     {
-        Order::where('id', $id)->delete();
+        $order = Order::find($id);
+        $order->menus()->detach();
+        $order->delete();
         return redirect('/allorder')->with('delete', 'Order is Deleted Successfully!!!');
     }
 }
