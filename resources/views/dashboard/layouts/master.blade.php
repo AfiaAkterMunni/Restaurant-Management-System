@@ -38,7 +38,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="treservation.html" class="nav-link text-white mb-2 sidebar-link">
+                                <a href="{{route('reservation.index')}}" class="nav-link text-white mb-2 sidebar-link">
                                     <i class="fas fa-table fa-lg mr-2"></i>Table Reservation
                                 </a>
                             </li>

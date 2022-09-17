@@ -11,6 +11,7 @@ use App\Http\Controllers\dashboard\ExpenseController;
 use App\Http\Controllers\dashboard\MessageController;
 use App\Http\Controllers\dashboard\EmployeeController;
 use App\Http\Controllers\frontend\ReservationController;
+use App\Http\Controllers\dashboard\ReservationController as DashboardReservationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +61,11 @@ Route::get('/expenses/delete/{id}', [ExpenseController::class,'delete'])->name('
 //-------------message-------------//
 Route::get('/messages', [MessageController::class,'index'])->name('messages');
 Route::get('/messages/delete/{id}', [MessageController::class,'delete'])->name('message.delete');
+
+//-------------Reservation-------------//
+Route::get('/allreservation', [DashboardReservationController::class,'index'])->name('reservation.index');
+Route::get('/reservation/approve/{id}', [DashboardReservationController::class,'approve'])->name('reservation.approve');
+Route::get('/reservation/delete/{id}', [DashboardReservationController::class,'delete'])->name('reservation.delete');
 
 //-------------Employee-------------//
 Route::get('/employees', [EmployeeController::class,'index'])->name('employee.index');
