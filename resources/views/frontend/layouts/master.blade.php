@@ -35,7 +35,7 @@
 					<a class="nav-link" href="{{route('menu')}}">Menu</a>
 				</li>
 				<li class="nav-item border-left border-secondary">
-					<a class="nav-link" href="order.html">Order</a>
+					<a class="nav-link" href="{{route('order')}}">Order</a>
 				</li>
 				<li class="nav-item border-left border-secondary">
 					<a class="nav-link" href="{{route('reservation')}}">Reservation</a>
@@ -89,7 +89,7 @@
 							<a class="nav-link" style="color: #aaa;" href="{{route('menu')}}">Food Menu</a>
 						</li>
 						<li class="nav-item border-bottom">
-							<a class="nav-link" style="color: #aaa;" href="order.html">Food Order</a>
+							<a class="nav-link" style="color: #aaa;" href="{{route('order')}}">Food Order</a>
 						</li>
 						<li class="nav-item border-bottom">
 							<a class="nav-link" style="color: #aaa;" href="{{route('reservation')}}">Table Reservation</a>

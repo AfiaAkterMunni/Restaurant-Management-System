@@ -12,6 +12,7 @@ use App\Http\Controllers\dashboard\MessageController;
 use App\Http\Controllers\dashboard\EmployeeController;
 use App\Http\Controllers\frontend\ReservationController;
 use App\Http\Controllers\dashboard\ReservationController as DashboardReservationController;
+use App\Http\Controllers\frontend\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,10 @@ Route::post('/reservation/store', [ReservationController::class,'store'])->name(
 
 //---contact store---//
 Route::post('/contact/store', [ContactController::class,'store'])->name('contact.store');
+
+//-------------Order-------------//
+Route::get('/order', [OrderController::class,'index'])->name('order');
+Route::post('/order/store', [OrderController::class,'store'])->name('order.store');
 
 //----------------------------------------------------------------------//
 //---------------------------------------Dashboard----------------------//
