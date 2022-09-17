@@ -28,7 +28,7 @@
 
                         <ul class="navbar-nav flex-column">
                             <li class="nav-item current">
-                                <a href="dashboard.html" class="nav-link text-white mb-2">
+                                <a href="{{route('index')}}" class="nav-link text-white mb-2">
                                     <i class="fas fa-tachometer-alt fa-lg mr-2"></i>Dashboard
                                 </a>
                             </li>

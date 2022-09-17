@@ -11,6 +11,7 @@ use App\Http\Controllers\frontend\ContactController;
 use App\Http\Controllers\dashboard\ExpenseController;
 use App\Http\Controllers\dashboard\MessageController;
 use App\Http\Controllers\dashboard\EmployeeController;
+use App\Http\Controllers\dashboard\DashboardController;
 use App\Http\Controllers\frontend\ReservationController;
 use App\Http\Controllers\dashboard\OrderController as DashboardOrderController;
 use App\Http\Controllers\dashboard\ReservationController as DashboardReservationController;
@@ -46,6 +47,8 @@ Route::post('/order/store', [OrderController::class,'store'])->name('order.store
 //----------------------------------------------------------------------//
 //---------------------------------------Dashboard----------------------//
 //----------------------------------------------------------------------//
+
+Route::get('/index', [DashboardController::class,'index'])->name('index');
 
 //-------------Menu-------------//
 Route::get('/menus', [MenuController::class,'index'])->name('menu.index');
