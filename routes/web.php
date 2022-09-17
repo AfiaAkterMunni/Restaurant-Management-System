@@ -10,6 +10,7 @@ use App\Http\Controllers\frontend\ContactController;
 use App\Http\Controllers\dashboard\ExpenseController;
 use App\Http\Controllers\dashboard\MessageController;
 use App\Http\Controllers\dashboard\EmployeeController;
+use App\Http\Controllers\frontend\ReservationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,8 @@ Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/about', [AboutController::class,'index'])->name('about');
 Route::get('/contact', [ContactController::class,'index'])->name('contact');
 Route::get('/allmenus', [AllMenuController::class,'index'])->name('menu');
+Route::get('/reservation', [ReservationController::class,'index'])->name('reservation');
+Route::post('/reservation/store', [ReservationController::class,'store'])->name('reservation.store');
 
 //---contact store---//
 Route::post('/contact/store', [ContactController::class,'store'])->name('contact.store');
