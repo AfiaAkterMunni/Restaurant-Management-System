@@ -5,14 +5,15 @@ use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\dashboard\UserController;
 use App\Http\Controllers\dashboard\MenuController;
 use App\Http\Controllers\frontend\AboutController;
+use App\Http\Controllers\frontend\OrderController;
 use App\Http\Controllers\frontend\AllMenuController;
 use App\Http\Controllers\frontend\ContactController;
 use App\Http\Controllers\dashboard\ExpenseController;
 use App\Http\Controllers\dashboard\MessageController;
 use App\Http\Controllers\dashboard\EmployeeController;
 use App\Http\Controllers\frontend\ReservationController;
+use App\Http\Controllers\dashboard\OrderController as DashboardOrderController;
 use App\Http\Controllers\dashboard\ReservationController as DashboardReservationController;
-use App\Http\Controllers\frontend\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,3 +78,8 @@ Route::get('/employees', [EmployeeController::class,'index'])->name('employee.in
 Route::post('/employees/store', [EmployeeController::class,'store'])->name('employee.store');
 Route::post('/employees/update/{id}', [EmployeeController::class,'update'])->name('employee.update');
 Route::get('/employees/delete/{id}', [EmployeeController::class,'delete'])->name('employee.delete');
+
+//-------------Order-------------//
+Route::get('/allorder', [DashboardOrderController::class,'index'])->name('order.index');
+Route::get('/order/approve/{id}', [DashboardOrderController::class,'approve'])->name('order.approve');
+Route::get('/order/delete/{id}', [DashboardOrderController::class,'delete'])->name('order.delete');

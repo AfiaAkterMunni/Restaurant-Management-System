@@ -33,7 +33,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="order.html" class="nav-link text-white mb-2 sidebar-link">
+                                <a href="{{route('order.index')}}" class="nav-link text-white mb-2 sidebar-link">
                                     <i class="fas fa-list-ul fa-lg mr-2"></i>Food Orders
                                 </a>
                             </li>
