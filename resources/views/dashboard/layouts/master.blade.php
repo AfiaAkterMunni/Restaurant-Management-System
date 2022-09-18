@@ -123,7 +123,20 @@
                         <button type="button" class="close" data-dismiss="alert">×</button>
                         {{ session('success') }}
                     </div>
-                @endif
+                    @endif
+
+                    @if (session('password'))
+                    <div class="alert alert-success" role="alert">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        {{ session('password') }}
+                    </div>
+                    @endif
+                    @if (session('erorrpass'))
+                    <div class="alert alert-danger" role="alert">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        {{ session('erorrpass') }}
+                    </div>
+                    @endif
                 </div>
             </div>
         </div>
@@ -187,24 +200,31 @@
                     <button class="close text-white" data-dismiss="modal"><span>&times;</span></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form action="{{route('profile.changepassword')}}" method="POST">
+                        @csrf
                         <div class="form-group">
                             <label for="oldPassword">Old Password</label>
-                            <input type="password" class="form-control" placeholder="Enter Old Password">
+                            <input type="password"  name="old_pass" class="form-control" placeholder="Enter Old Password">
+                            @error('old_pass')
+                                <p class="text-danger">{{$message}}</p>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label for="newPassword">New Password</label>
-                            <input type="password" class="form-control" placeholder="Enter New Password">
+                            <input type="password" name="password" class="form-control" placeholder="Enter New Password">
+                            @error('password')
+                                <p class="text-danger">{{$message}}</p>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label for="confirmNewPassword">Confirm New Password</label>
-                            <input type="password" class="form-control" placeholder="Confirm New Password">
+                            <input type="password"  name="password_confirmation" class="form-control" placeholder="Confirm New Password">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-success">Save Changes</button>
                         </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-danger" data-dismiss="modal">Close</button>
-                    <button class="btn btn-success" data-dismiss="modal">Save Changes</button>
                 </div>
             </div>
         </div>
