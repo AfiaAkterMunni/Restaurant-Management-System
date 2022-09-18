@@ -14,6 +14,7 @@ use App\Http\Controllers\dashboard\EmployeeController;
 use App\Http\Controllers\dashboard\DashboardController;
 use App\Http\Controllers\frontend\ReservationController;
 use App\Http\Controllers\dashboard\OrderController as DashboardOrderController;
+use App\Http\Controllers\dashboard\ProfileController;
 use App\Http\Controllers\dashboard\ReservationController as DashboardReservationController;
 use App\Http\Controllers\dashboard\RevenueController;
 use Illuminate\Support\Facades\Auth;
@@ -49,48 +50,52 @@ Route::post('/order/store', [OrderController::class,'store'])->name('order.store
 //----------------------------------------------------------------------//
 //---------------------------------------Dashboard----------------------//
 //----------------------------------------------------------------------//
+Route::middleware('auth')->group(function(){
 
-Route::get('/dashboard', [DashboardController::class,'index'])->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class,'index'])->name('dashboard');
 
-//-------------Menu-------------//
-Route::get('/menus', [MenuController::class,'index'])->name('menu.index');
-Route::post('/menus/category/store', [CategoryController::class,'store'])->name('category.store');
-Route::post('/menus/store', [MenuController::class,'store'])->name('menu.store');
-Route::post('/menus/update/{id}', [MenuController::class,'update'])->name('menu.update');
-Route::get('/menus/delete/{id}', [MenuController::class,'delete'])->name('menu.delete');
+    //-------------Menu-------------//
+    Route::get('/menus', [MenuController::class,'index'])->name('menu.index');
+    Route::post('/menus/category/store', [CategoryController::class,'store'])->name('category.store');
+    Route::post('/menus/store', [MenuController::class,'store'])->name('menu.store');
+    Route::post('/menus/update/{id}', [MenuController::class,'update'])->name('menu.update');
+    Route::get('/menus/delete/{id}', [MenuController::class,'delete'])->name('menu.delete');
 
-//-------------Admin-------------//
-Route::get('/users', [UserController::class,'index'])->name('user.index');
-Route::post('/users/store', [UserController::class,'store'])->name('user.store');
+    //-------------Admin-------------//
+    Route::get('/users', [UserController::class,'index'])->name('user.index');
+    Route::post('/users/store', [UserController::class,'store'])->name('user.store');
 
-//-------------Expense-------------//
-Route::get('/expenses', [ExpenseController::class,'index'])->name('expense.index');
-Route::post('/expenses/store', [ExpenseController::class,'store'])->name('expense.store');
-Route::post('/expenses/update/{id}', [ExpenseController::class,'update'])->name('expense.update');
-Route::get('/expenses/delete/{id}', [ExpenseController::class,'delete'])->name('expense.delete');
+    //-------------Expense-------------//
+    Route::get('/expenses', [ExpenseController::class,'index'])->name('expense.index');
+    Route::post('/expenses/store', [ExpenseController::class,'store'])->name('expense.store');
+    Route::post('/expenses/update/{id}', [ExpenseController::class,'update'])->name('expense.update');
+    Route::get('/expenses/delete/{id}', [ExpenseController::class,'delete'])->name('expense.delete');
 
-//-------------message-------------//
-Route::get('/messages', [MessageController::class,'index'])->name('messages');
-Route::get('/messages/delete/{id}', [MessageController::class,'delete'])->name('message.delete');
+    //-------------message-------------//
+    Route::get('/messages', [MessageController::class,'index'])->name('messages');
+    Route::get('/messages/delete/{id}', [MessageController::class,'delete'])->name('message.delete');
 
-//-------------Reservation-------------//
-Route::get('/allreservation', [DashboardReservationController::class,'index'])->name('reservation.index');
-Route::get('/reservation/approve/{id}', [DashboardReservationController::class,'approve'])->name('reservation.approve');
-Route::get('/reservation/delete/{id}', [DashboardReservationController::class,'delete'])->name('reservation.delete');
+    //-------------Reservation-------------//
+    Route::get('/allreservation', [DashboardReservationController::class,'index'])->name('reservation.index');
+    Route::get('/reservation/approve/{id}', [DashboardReservationController::class,'approve'])->name('reservation.approve');
+    Route::get('/reservation/delete/{id}', [DashboardReservationController::class,'delete'])->name('reservation.delete');
 
-//-------------Employee-------------//
-Route::get('/employees', [EmployeeController::class,'index'])->name('employee.index');
-Route::post('/employees/store', [EmployeeController::class,'store'])->name('employee.store');
-Route::post('/employees/update/{id}', [EmployeeController::class,'update'])->name('employee.update');
-Route::get('/employees/delete/{id}', [EmployeeController::class,'delete'])->name('employee.delete');
+    //-------------Employee-------------//
+    Route::get('/employees', [EmployeeController::class,'index'])->name('employee.index');
+    Route::post('/employees/store', [EmployeeController::class,'store'])->name('employee.store');
+    Route::post('/employees/update/{id}', [EmployeeController::class,'update'])->name('employee.update');
+    Route::get('/employees/delete/{id}', [EmployeeController::class,'delete'])->name('employee.delete');
 
-//-------------Order-------------//
-Route::get('/allorder', [DashboardOrderController::class,'index'])->name('order.index');
-Route::get('/order/approve/{id}', [DashboardOrderController::class,'approve'])->name('order.approve');
-Route::get('/order/delete/{id}', [DashboardOrderController::class,'delete'])->name('order.delete');
+    //-------------Order-------------//
+    Route::get('/allorder', [DashboardOrderController::class,'index'])->name('order.index');
+    Route::get('/order/approve/{id}', [DashboardOrderController::class,'approve'])->name('order.approve');
+    Route::get('/order/delete/{id}', [DashboardOrderController::class,'delete'])->name('order.delete');
 
+    //-------------Order-------------//
+    Route::get('/revenue', [RevenueController::class,'index'])->name('revenue');
 
-//-------------Order-------------//
-Route::get('/revenue', [RevenueController::class,'index'])->name('revenue');
+    //...........profile..............//
+    Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
 
+});
 Auth::routes();
