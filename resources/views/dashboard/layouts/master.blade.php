@@ -28,7 +28,7 @@
 
                         <ul class="navbar-nav flex-column">
                             <li class="nav-item current">
-                                <a href="{{route('index')}}" class="nav-link text-white mb-2">
+                                <a href="{{route('dashboard')}}" class="nav-link text-white mb-2">
                                     <i class="fas fa-tachometer-alt fa-lg mr-2"></i>Dashboard
                                 </a>
                             </li>
@@ -53,7 +53,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="revenue.html" class="nav-link text-white mb-2 sidebar-link">
+                                <a href="{{route('revenue')}}" class="nav-link text-white mb-2 sidebar-link">
                                     <i class="fas fa-file-alt fa-lg mr-2"></i>Revenue Report
                                 </a>
                             </li>
@@ -92,12 +92,17 @@
                         </li>
                         <li class="nav-item ml-auto">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" style="font-size: 1rem; text-transform: lowercase;">
-                                <i class="fas fa-user-circle fa-lg"></i> Admin
+                                <i class="fas fa-user-circle fa-lg"></i> {{ Auth::user()->name }}
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="#" role="button" data-toggle="modal" data-target="#editProfileModal"><i class="fas fa-user"></i> Edit Profile</a>
                                 <a class="dropdown-item" href="#" role="button" data-toggle="modal" data-target="#changePasswordModal"><i class="fas fa-cog"></i> Change Password</a>
-                                <a class="dropdown-item" href="#" role="button" data-toggle="modal" data-target="#logOutModal"><i class="fas fa-power-off"></i> Logout</a>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                 onclick="event.preventDefault();
+                                              document.getElementById('logout-form').submit();"><i class="fas fa-power-off"></i> Logout</a>
+                                              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                @csrf
+                                            </form>
                             </div>
                         </li>
                     </ul>
