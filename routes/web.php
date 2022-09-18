@@ -15,6 +15,8 @@ use App\Http\Controllers\dashboard\DashboardController;
 use App\Http\Controllers\frontend\ReservationController;
 use App\Http\Controllers\dashboard\OrderController as DashboardOrderController;
 use App\Http\Controllers\dashboard\ReservationController as DashboardReservationController;
+use App\Http\Controllers\dashboard\RevenueController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,7 +50,7 @@ Route::post('/order/store', [OrderController::class,'store'])->name('order.store
 //---------------------------------------Dashboard----------------------//
 //----------------------------------------------------------------------//
 
-Route::get('/index', [DashboardController::class,'index'])->name('index');
+Route::get('/dashboard', [DashboardController::class,'index'])->name('dashboard');
 
 //-------------Menu-------------//
 Route::get('/menus', [MenuController::class,'index'])->name('menu.index');
@@ -86,3 +88,9 @@ Route::get('/employees/delete/{id}', [EmployeeController::class,'delete'])->name
 Route::get('/allorder', [DashboardOrderController::class,'index'])->name('order.index');
 Route::get('/order/approve/{id}', [DashboardOrderController::class,'approve'])->name('order.approve');
 Route::get('/order/delete/{id}', [DashboardOrderController::class,'delete'])->name('order.delete');
+
+
+//-------------Order-------------//
+Route::get('/revenue', [RevenueController::class,'index'])->name('revenue');
+
+Auth::routes();
