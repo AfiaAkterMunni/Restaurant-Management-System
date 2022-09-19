@@ -8,9 +8,8 @@
 }
 
 .btn-success {
-  background: #0a680a;
+  background: rgb(10, 104, 10);
 }
-
 .btn-success:hover {
   background: #063906;
 }
@@ -21,13 +20,11 @@
 
 .sidebar {
   height: 100vh;
-  -webkit-box-shadow: 10px 0px 5px -7px rgba(0, 0, 255, 0.75);
-          box-shadow: 10px 0px 5px -7px rgba(0, 0, 255, 0.75);
+  box-shadow: 10px 0px 5px -7px rgba(0, 0, 255, 0.75);
 }
 
 .common-shadow .card {
-  -webkit-box-shadow: 0.1rem 0.2rem 0.4rem #00074B !important;
-          box-shadow: 0.1rem 0.2rem 0.4rem #00074B !important;
+  box-shadow: 0.1rem 0.2rem 0.4rem #00074B !important;
 }
 
 h1 {
@@ -37,7 +34,6 @@ h1 {
 .btn-primary {
   background: #00074B !important;
 }
-
 .btn-primary:hover {
   background: #0011b1 !important;
 }
@@ -45,17 +41,12 @@ h1 {
 .btn-success {
   background: #00074B !important;
 }
-
 .btn-success:active {
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  box-shadow: none !important;
 }
-
 .btn-success:focus {
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  box-shadow: none !important;
 }
-
 .btn-success:hover {
   background: #0011b1 !important;
 }
@@ -87,22 +78,19 @@ h1 {
 .form-control {
   border-radius: 0;
 }
-
 .form-control:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   border-color: #00074B;
 }
 
 .nav-link {
   font-weight: bold;
-  font-size: .9rem;
 }
 
 .card-text {
   font-weight: bold;
   text-transform: uppercase !important;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
 
 label {
@@ -114,20 +102,18 @@ label {
   background: #00074B !important;
   color: #fff;
 }
-
 .navbar-brand h1 {
-  letter-spacing: .2rem !important;
+  letter-spacing: 0.2rem !important;
 }
-
 .navbar-brand p {
-  font-size: .7rem;
-  letter-spacing: .2rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2rem;
   font-weight: bold;
 }
 
 .nav-link {
   text-transform: uppercase;
-  padding: .6rem 1rem !important;
+  padding: 0.6rem 1rem !important;
   color: #00074B !important;
 }
 
@@ -141,10 +127,9 @@ label {
 }
 
 .dropdown-item {
-  padding: .6rem 1rem !important;
+  padding: 0.6rem 1rem !important;
   color: #00074B !important;
 }
-
 .dropdown-item:hover {
   background: none !important;
   color: deepskyblue !important;
@@ -157,9 +142,8 @@ label {
 
 .topnav {
   background: #00074B;
-  padding: .2rem;
+  padding: 0.2rem;
 }
-
 .topnav .nav-link {
   color: white !important;
 }
@@ -169,8 +153,7 @@ label {
 }
 
 .sidebar-link {
-  -webkit-transition: all .5s ease-in;
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .sidebar-link:hover {
@@ -178,24 +161,19 @@ label {
 }
 
 .fa-bars {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .dashbar .card {
-  -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.98);
-          box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.98);
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.98);
 }
-
 .dashbar .card .card-body i.fas {
   color: #00074B;
   font-size: 3rem;
 }
-
 .dashbar .card .card-body h1 {
   color: #00074B !important;
 }
-
 .dashbar .card .card-body p {
   color: #00074B !important;
 }
@@ -217,4 +195,3 @@ label {
     position: static;
   }
 }
-/*# sourceMappingURL=style.css.map */

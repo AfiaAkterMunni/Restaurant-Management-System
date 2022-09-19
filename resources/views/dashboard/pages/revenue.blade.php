@@ -16,9 +16,6 @@
                                 <div class="card-body">
                                     {!!$revenueChart->container()!!}
                                 </div>
-                                <div class="card-footer d-flex justify-content-center">
-                                    <button class="btn btn-md btn-success">Print</button>
-                                </div>
                             </div>
                         </div>
                     </div>

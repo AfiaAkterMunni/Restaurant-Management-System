@@ -1,0 +1,198 @@
+@import "_colors.scss";
+@import "_mixin.scss";
+
+.sidebar {
+    height: 100vh;
+    box-shadow: 10px 0px 5px -7px rgba(0,0,255,0.75)
+}
+.common-shadow {
+    .card {
+        box-shadow: $box-shadow !important;
+    }
+}
+
+h1 {
+    color: $primary-color !important;
+}
+
+.btn-primary {
+    background: $primary-color !important;
+
+    &:hover {
+        background: lighten($color: $primary-color, $amount: 20%) !important;
+    }
+}
+.btn-success {
+    background: $primary-color !important;
+    &:active {
+        box-shadow: none !important;
+    }
+    &:focus {
+        box-shadow: none !important;
+    }
+
+    &:hover {
+        background: lighten($color: $primary-color, $amount: 20%) !important;
+    }
+}
+
+.modal-header {
+    background: $primary-color !important;
+    color: white !important;
+}
+
+.bg-dark {
+    background: #fff !important;
+    color: #00074B;
+}
+
+.nav-item.current {
+    .nav-link {
+        color: darken($color: deepskyblue, $amount: 15%) !important;
+    }
+}
+
+.modal {
+    position: absolute !important;
+    top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.bg-modal {
+    background: #00074B;
+}
+
+.form-control {
+    border-radius: 0;
+    &:focus {
+        box-shadow: none;
+        border-color: #00074B;
+    }
+}
+
+.nav-link {
+    font-weight: bold;
+}
+
+.card-text {
+    font-weight: bold;
+    text-transform: uppercase !important;
+    letter-spacing: .1rem;
+}
+
+label {
+    color: #00074B;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    background: #00074B !important;
+    color: #fff;
+    h1 {
+        letter-spacing: .2rem !important;
+    }
+    p {
+        font-size: .7rem;
+        letter-spacing: .2rem;
+        font-weight: bold;
+    }
+}
+
+.nav-link {
+    text-transform: uppercase;
+    padding: .6rem 1rem !important;
+    color: #00074B !important;
+}
+
+.dropdown-menu {
+    border-radius: 0;
+    border: none;
+}
+
+.dropright .dropdown-menu {
+    margin: 0 !important;
+}
+
+.dropdown-item {
+    padding: .6rem 1rem !important;
+    color: #00074B !important;
+
+    &:hover {
+        background: none !important;
+        color: deepskyblue !important;
+    }
+}
+
+.dropdown-item:hover {
+    background: none;
+    color: deepskyblue !important;
+}
+
+.topnav {
+    background: #00074B;
+    padding: .2rem;
+    .nav-link {
+        color: white !important;
+    }
+}
+
+.revenue {
+    .card-title {
+        color: deepskyblue !important;
+    }
+}
+
+.sidebar-link {
+    transition: all .5s ease-in;
+}
+
+.sidebar-link:hover {
+    color: darken($color: deepskyblue, $amount: 15%) !important;
+}
+
+.fa-bars {
+    transform: rotate(90deg);
+}
+
+.dashbar {
+    .card {
+        box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.98);
+        .card-body {
+            i.fas {
+                color: #00074B;
+                font-size: 3rem;
+            }
+
+            h1 {
+                color: #00074B !important;
+            }
+            p {
+                color: #00074B !important;
+            }
+        }
+    }
+}
+.selling-items {
+    .card {
+        .card-title {
+            color: deepskyblue;
+        }
+    }
+}
+
+.card { 
+    .card-header {
+        background: white;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: static;
+        height: auto;
+    }
+
+    .top-navbar {
+        position: static;
+    }
+}

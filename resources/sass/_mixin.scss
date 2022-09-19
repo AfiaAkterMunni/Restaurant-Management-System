@@ -1,0 +1,18 @@
+.btn {
+    border-radius: 0 !important;
+}
+
+.thead-background {
+    background: $primary-color !important;
+    color: white;
+}
+
+.btn-success {
+    background: $btn-success;
+    &:hover {
+        background: darken($color: $btn-success, $amount: 10%);
+    }
+}
+.btn-danger {
+    background: $btn-danger;
+}
