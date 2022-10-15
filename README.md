@@ -1,12 +1,10 @@
-# <img src="public/img\985px-Laravel.svg.png" alt="drawing" style="width:60px;"/> Restaurant Management System
+# <center><img src="public/img\985px-Laravel.svg.png" alt="drawing" style="width:60px;"/> Restaurant Management System</center>
 
 This **Restaurant Management System** can manage ordering and reservation process for customer. This system is developed for providing the food ordering and table reservation service to the customer. There are two types of user in this system which are admin and customer. Admin can handle customer information and also handle menu item by categories.
 
 <br>
 
 ## Installation
-
----
 
 Please follow the below instruction to run the project.
 
